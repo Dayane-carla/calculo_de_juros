@@ -1,0 +1,51 @@
+Algoritmo "EmpresaOzzy-calculo-juros"
+
+
+
+
+Var
+   valor,juros, parcela,taxa,total, juros_acumulado:real
+   periodo:inteiro
+
+
+
+
+
+Inicio
+   escreval("----------------------EMPRESA OZZY----------------------------")
+   escreval("--------------------------------------------------------------")
+   escreval("--------------------------------------------------------------")
+   escreval("--------------------CÁLCULO DE JUROS--------------------------")
+
+
+   escreva("Valor principal:")
+   leia(valor)
+   escreva("Taxa de juros:")
+   leia(taxa)
+   escreva("Período:")
+   leia(periodo)
+   escreval("--------------------------------------------------------------")
+
+   parcela <- valor
+   taxa <- taxa / 100
+
+
+        para periodo <- 1 ate periodo faca
+
+
+             juros <- parcela * taxa
+             parcela <- parcela + juros
+             escreval ("No período - ",periodo, " o valor da parcela é de: R$ ",parcela:4:2)
+
+        fimpara
+
+
+   escreval("--------------------------------------------------------------")
+
+   juros_acumulado <- parcela - valor
+
+
+   escreval("O valor total de juros do período é de:  R$ " , juros_acumulado:4:2)
+
+
+Fimalgoritmo
